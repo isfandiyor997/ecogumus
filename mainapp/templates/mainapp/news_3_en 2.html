@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block links %}
+  <link rel="stylesheet" href="{% static 'css/news_3.css' %}" />
+{% endblock %}
+{% block title %}
+  {{ title }}
+{% endblock %}
+{% block header_content %}
+  <div class="header_main">
+    <h1 class="header_title">
+      Uzbek producers aim to export over $100 million</h1>
+  </div>
+{% endblock %}
+{% block content %}
+  <section class="news_content container">
+      <div class="news_text">
+        The Ministry of Investment, Industry and Trade of the Republic of Uzbekistan, together with the international operator company IMGR, is implementing an export accelerator program for Uzbek manufacturers.
+        </p>
+          <p> At the first stage, more than 500 applications were collected, from which 100 participants were selected - manufacturing companies from various industries intending to enter foreign markets. </p>
+        
+            The participants of the export accelerator program have set their sights on exports of more than $100 million in 2025.
+            </p>
+            </div>
+    </div>
+    <div class="news_content">
+      <div class="images">
+        <img src="{% static 'img/news_3_1.jpg' %}" alt="" />
+        <img src="{% static 'img/news_3_2.jpg' %}" alt="" />
+        <img src="{% static 'img/news_3_3.jpg' %}" alt="" />
+      </div>
+    </div>
+    <section class="time container">
+      <p>03.12.2023</p>
+    </section>
+  </section>
+{% endblock %}
+{% block scripts %}
+  <script src=""></script>
+{% endblock %}

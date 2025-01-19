@@ -2,16 +2,17 @@
 {% load static %}
 
 {% block links %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 <link rel="stylesheet" href="{% static 'css/about_company.css' %}">
 {% endblock links %}
 {% block title %} {{title}} {% endblock title %}
 {% block header_content %}
 
-<div class="title">
-    We are the leading producers of organomineral fertilizers in Uzbekistan
-</div>
-<div class="logo">
-    <img src="{% static 'img/logo.png' %}" alt="logo">
+<div class="header_main">
+    <h1 class="header_title">
+        We are a leader in the production of organic mineral fertilizers in Uzbekistan.
+</h2>
 </div>
 {% endblock header_content %}
 {% block content %}
@@ -21,7 +22,7 @@
         <div class="title"><div class="wrap">ABOUT THE COMPANY</div></div>
   
         <span class="about_company_subtitle">
-            Ekogumus was officially founded in 1997, but the first steps towards its development and prosperity were made back in 1988 by our father, the founder of the company - Haitboy Solizhonov. We continue to expand and develop our father's business. For more than thirty years, the company has become a leader in the agricultural industry, providing effective solutions for agriculture around the world.
+            "Ecogumus" was officially founded in 1997, but the first steps towards its development and prosperity were taken back in 1988 by our father, the founder of the company, Khaitboy Solizhonov. We continue to expand and develop our father's business. For more than thirty years, the company has become a leader in the agricultural industry, providing efficient solutions for agriculture around the world.
         </span>
         <div class="title_bg">
             <div class="img_bg"><img src="{% static 'img/tablet.png' %}" alt="tablet"></div>
@@ -31,29 +32,114 @@
     <div class="about_company_history">
         <div class="history_colum">
             <p>
-                The company became known as "Ekogumus" and began its journey with a small plot of land for breeding California worms and obtaining high-quality fertilizer - Biohumus. Subsequently, the laboratory of the Fergana State University began to be used for analysis at the beginning.
+                The company became known as "Ekogumus" and began its journey with a small plot of land for breeding California worms and obtaining high-quality fertilizer - Vermicompost. Subsequently, the laboratory of Ferghana State University was initially used for analysis.
+                Despite limited resources, the team of scientists worked with inexhaustible enthusiasm and determination. The first years were not easy, but thanks to their scientific talent and hard work, they were able to develop a unique type of organomineral fertilizer.
             </p>
             <p>
-                Despite limited resources, the team of scientists worked with inexhaustible enthusiasm and determination. The first years were not easy, but thanks to scientific talent and hard work, dedication, they were able to develop a unique type of organomineral fertilizer.
+                Every year, Ekogumus expanded its research facilities. 
+                and production capabilities. Over time, they are fertilized 
+                they have become in great demand among farmers and rural 
+                farms all over the world. The company actively collaborated with
+                agronomists to adapt its products to various 
+                soils and climatic conditions.
+            </p>
+        
+            <p>
+                The success of the Ekogumus company continued to grow, and it became 
+                not only a leading producer of organomineral fertilizers, but also 
+                leaders in the field of agricultural research. Company 
+                invested in the development of new technologies, which allowed 
+                They need to create even more efficient and environmentally friendly products.
             </p>
             <p>
-                Every year Ekogumus expanded its research and production capabilities. Over time, their fertilizers have become in great demand among farmers and agriculture around the world. The company actively collaborated with agronomists to adapt its products to different soils and climatic conditions.
-            </p>
-        </div>
-        <div class="history_colum">
-            <p>
-                The success of Ekogumus continued to grow, and it became not only a leading producer of organic fertilizers, but also a leader in agricultural research. The company invested in the development of new technologies, which allowed them to create even more efficient and environmentally friendly products.
-            </p>
-            <p>
-                Over time, Ekogumus has become known as a symbol of innovation and quality in agriculture. She has been actively involved in sustainable rural development, providing knowledge and resources to increase yields and improve the lives of local farmers.
+                Over time, Ekogumus has become known as a symbol of innovation.
+                 and quality in agriculture. She actively participated in 
+                 sustainable rural development by providing knowledge and 
+                 resources to increase yields and improve the lives of local farmers
+                  farmers.
             </p>
             <p>
-                Today, more than thirty years after its foundation, Ekogumus continues to delight its customers with innovative products and solutions that contribute to the growth of agriculture and the well-being of society. Her efforts and dedication to agriculture have become a real contribution to ensuring food security and prosperity of world agriculture.
+                Today, more than thirty years after its foundation, Ekogumus
+                continues to delight its customers with innovative products. 
+                and solutions that promote the growth of agriculture and 
+                the welfare of society. Her efforts and dedication to rural 
+                farms have become a real contribution to ensuring food security 
+                the security and prosperity of world agriculture.
             </p>
         </div>
     </div> 
 </section>
+<section class="certificates container">
+    <div class="composition">
+        <div class="composition_title">Certificates of conformity and quality</div>
+        </div>
+    <div class="certificates_slider">
+        <div id="animated-thumbnails-gallery" class="certificates_slider_wrap">
+            <a href="{% static 'img/certificate_1.png' %}" class="page">
+                <img src="{% static 'img/certificate_1.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_8.png' %}" class="page">
+                <img src="{% static 'img/certificate_8.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_12.png' %}" class="page">
+                <img src="{% static 'img/certificate_12.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_9.png' %}" class="page">
+                <img src="{% static 'img/certificate_9.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_10.png' %}" class="page">
+                <img src="{% static 'img/certificate_10.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_2.png' %}" class="page">
+                <img src="{% static 'img/certificate_2.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_3.png' %}" class="page">
+                <img src="{% static 'img/certificate_3.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_13.png' %}" class="page">
+                <img src="{% static 'img/certificate_13.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_14.png' %}" class="page">
+                <img src="{% static 'img/certificate_14.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_4.png' %}" class="page">
+                <img src="{% static 'img/certificate_4.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_5.png' %}" class="page">
+                <img src="{% static 'img/certificate_5.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_6.png' %}" class="page">
+                <img src="{% static 'img/certificate_6.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_7.png' %}" class="page">
+                <img src="{% static 'img/certificate_7.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_11.png' %}" class="page">
+                <img src="{% static 'img/certificate_11.png' %}" alt="certificate">
+            </a>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+<section id="feedback" style="margin-top: 50px; padding: 20px;">
+    <h2>Feedback</h2>
+    <form action="/submit_feedback/" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+        {% csrf_token %}
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required style="padding: 10px; width: 100%;">
+  
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required style="padding: 10px; width: 100%;">
+  
+      <label for="comment">Comment:</label>
+      <textarea id="comment" name="comment" placeholder="Enter your comment" rows="5" required style="padding: 10px; width: 100%;"></textarea>
+  
+      <button type="submit" style="padding: 10px 20px; color: black; border: none; cursor: pointer;">Send</button>
+    </form>
+  </section>
 {% endblock content %}
 {% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="{% static 'js/about_company.js'%}"></script>
 {% endblock scripts %}

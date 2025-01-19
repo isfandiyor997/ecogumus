@@ -126,3 +126,14 @@ class CooperationPageView(TemplateView):
         if lang == 'uz':
             context['title'] = "Ecogumus | Hamkorlik"
         return context
+@csrf_exempt
+def submit_feedback(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        comment = request.POST.get('comment')
+
+        # Здесь вы можете сохранить данные в базу данных
+        print(f"Получен отзыв от {name} ({email}): {comment}")
+        return JsonResponse({'status': 'success'})
+    return JsonResponse({'status': 'error'}, status=400)

@@ -2,7 +2,6 @@
 {% load static %}
 
 {% block links %}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css">
 <link rel="stylesheet" href="{% static 'css/main.css' %}">
@@ -16,9 +15,6 @@
         Biz O'zbekistonda yetakchi organomineral o'g'it ishlab chiqaruvchilarmiz
     </h2>
 </div>
-<div class="header_button">
-    <a class="button_more" href="{% url 'mainapp:about_company_page' lang=language %}">Подробнее...</a>
-</div>
 {% endblock header_content %}
 
 {% block content %}
@@ -26,7 +22,7 @@
     <div class="history_wrap container">
         <div class="history_main ">
             <div class="history_title">
-                30+ yil
+                30+ yil 
             </div>
             <div class="history_subtitle">
                 hosildorlikni oshirish uchun qilingan mehnat
@@ -53,31 +49,7 @@
             <div class="about_company_title">
                 Biz mamlakatda orgomineral o'g'itlarni ommaviy ishlab chiqarish bo'yicha muvofiqlik sertifikatga ega yagona tashkilotmiz
             </div>
-            <p class="about_company_text">
-                Solijonov Xaytboy biologiya fanlari nomzodi, dotsent, professor, FDUda ishlagan. 
-                U o'z Vatanining tuprog'ini qayta tiklash orzusiga ega edi. Uzoq 1988 yilda bir 
-                guruh tashabbuskor olimlar va qishloq xo'jaligi mutaxassislari bilan birgalikda 
-                Kaliforniya qizil chuvalchanglari yordamida innovatsion organomineral o'g'it 
-                kompaniyasini yaratish uchun kuchlarini birlashtirishga qaror qildi. Asoschi 
-                nazariyani amaliyot bilan birlashtirdi. Ular ekinlarning hosildorligi va sifatini 
-                sezilarli darajada oshirishi mumkin bo'lgan noyob o'g'itlarni ishlab chiqishda ulkan salohiyatni ko'rdilar. 
-            </p>
-            <p class="about_company_text">
-                Kompaniya "Ekogumus" deb nomlandi va Kaliforniya chuvalchanglarini ko'paytirish va 
-                yuqori sifatli o'g'it - Biohumus ishlab chiqarish uchun kichik yer 
-                maydonidan boshladi. Tahlil ishlarini olib borish uchun dastlab 
-                Farg'ona Davlat Universiteti laboratoriyasidan foydalanildi. 
-                Cheklangan resurslarga qaramay, olimlar jamoasi bitmas-tuganmas ishtiyoq 
-                va qat'iyat bilan ishladilar. Dastlabki yillar oson bo'lmagan, ammo ilmiy 
-                iste'dod va mehnatsevarlik, fidoyilik tufayli ular organomineral o'g'itlarning 
-                noyob turini ishlab chiqishga muvaffaq bo'lishdi. 
-                <br>
-                Ayni paytda bizda O'zbekiston, Rossiya va O'rta Osiyoning boshqa mamlakatlarida 
-                yuqori sifatli organomineral o'g'it Biohumusni olish bo'yicha texnologik 
-                reglament va ishlab chiqarish ko'rsatmalariga rioya qilib ish olib borayotgan 1000 dan ortiq 
-                o'quvchilar (izdoshlar) bor.
-            </p>
-            <a href="" class="about_company_link">Tashkilot haqida</a>
+            <a href="{% url 'mainapp:about_company_page' lang=language %}" class="about_company_link">Tashkilot haqida</a>
             <div class="logo">
                 <img src="{% static 'img/logo.png' %}" alt="logo">
             </div>
@@ -86,11 +58,11 @@
 </section>
 <section class="our_product">
     <div class="our_product_inner container">
-        <div class="our_product_title">
-            Bizning mahsulotimiz 
-        </div>
         <div class="our_product_wrap ">
             <div class="our_product_main">
+                <div class="our_product_title">
+                    Bizning mahsulotimiz 
+                </div>
                 <div class="product_name">
                     Biohumus - organomineral o'g'it 
                 </div>
@@ -104,7 +76,8 @@
                         Bizning eksklyuziv mahsulotimiz bilan o'z ekinlaringizni to'g'ri parvarish qiling.
                     </p>
                 </div>
-                <a class="our_product_more_btn" href="">
+                
+                <a class="our_product_more_btn" href="{% url 'mainapp:product_page' lang=language %}">
                     Batafsil
                 </a>
             </div>
@@ -139,14 +112,14 @@
         <div class="numbers_main">
             <div class="info">
                 <div class="number">
-                    30+
+                    30+ yil
                 </div>
-                <p>YIL BOZORDA MUVAFFAQIYATLI ISHLASH
+                <p>BOZORDA MUVAFFAQIYATLI ISHLASH
                 </p>
             </div>
             <div class="info">
                 <div class="number">
-                    10000t+
+                    10000т+
                 </div>
                 <p>YILLIK PROGNOZ QILINGAN EKSPORT</p>
             </div>
@@ -159,58 +132,10 @@
         </div>
     </div>
 </section>
-<section class="certificates container">
-    <div class="certificates_slider">
-        <div id="animated-thumbnails-gallery" class="certificates_slider_wrap">
-            <a href="{% static './img/certificate_1.png' %}" class="page">
-                <img src="{% static './img/certificate_1.png' %}" alt="certificate">
-            </a>
-            <a href="{% static './img/certificate_8.png' %}" class="page">
-                <img src="{% static './img/certificate_8.png' %}" alt="certificate">
-            </a>
-            <a href="{% static './img/certificate_12.png' %}" class="page">
-                <img src="{% static './img/certificate_12.png' %}" alt="certificate">
-            </a>
-            <a href="{% static './img/certificate_9.png' %}" class="page">
-                <img src="{% static './img/certificate_9.png' %}" alt="certificate">
-            </a>
-            <a href="{% static './img/certificate_10.png' %}" class="page">
-                <img src="{% static './img/certificate_10.png' %}" alt="certificate">
-            </a>
-            <a href="{% static './img/certificate_2.png' %}" class="page">
-                <img src="{% static './img/certificate_2.png' %}" alt="certificate">
-            </a>
-            <a href="{% static './img/certificate_3.png' %}" class="page">
-                <img src="{% static './img/certificate_3.png' %}" alt="certificate">
-            </a>
-            <a href="{% static './img/certificate_13.png' %}" class="page">
-                <img src="{% static './img/certificate_13.png' %}" alt="certificate">
-            </a>
-            <a href="{% static './img/certificate_14.png' %}" class="page">
-                <img src="{% static './img/certificate_14.png' %}" alt="certificate">
-            </a>
-            <a href="{% static './img/certificate_4.png' %}" class="page">
-                <img src="{% static './img/certificate_4.png' %}" alt="certificate">
-            </a>
-            <a href="{% static './img/certificate_5.png' %}" class="page">
-                <img src="{% static './img/certificate_5.png' %}" alt="certificate">
-            </a>
-            <a href="{% static './img/certificate_6.png' %}" class="page">
-                <img src="{% static './img/certificate_6.png' %}" alt="certificate">
-            </a>
-            <a href="{% static './img/certificate_7.png' %}" class="page">
-                <img src="{% static './img/certificate_7.png' %}" alt="certificate">
-            </a>
-            <a href="{% static './img/certificate_11.png' %}" class="page">
-                <img src="{% static './img/certificate_11.png' %}" alt="certificate">
-            </a>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-</section>
 {{context.language}}
 {% endblock content %}
 {% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
 <script src="{% static 'js/main.js' %}"></script>

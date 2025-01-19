@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block links %}
+  <link rel="stylesheet" href="{% static 'css/news_2.css' %}" />
+{% endblock %}
+{% block title %}
+  {{ title }}
+{% endblock %}
+{% block header_content %}
+  <div class="header_main">
+    <h1 class="header_title">"Ekogumus" и "Mas Holding Company" подписали меморандум о развитии торгово-экономических отношений</h1>
+  </div>
+{% endblock %}
+{% block content %}
+  <section class="news_content container">
+    <div class="video_wrap">
+      <div class="video">
+        <video autoplay controls src="{% static 'video/news_2_video.mp4' %}"></video>
+      </div>
+      <div class="news_text">Обе стороны согласились, что ввиду необходимости построения надежных, прагматичных и выгодных отношений между обеими странами они желают инициировать эффективные и сердечные отношения между двумя организациями в развитии нескольких сфер, таких как сельское хозяйство, строительство, органические удобрения и продукты. Стороны ОРГАНИЗУЮТ встречи В2В для обсуждения дальнейшего сотрудничества в процедурах экспорта продукции из Узбекистана согласно законодательству двух стран.</div>
+    </div>
+    <div class="news_сontent">
+      <div class="images">
+        <img src="{% static 'img/news_2_content_3.jpg' %}" alt="" />
+        <img src="{% static 'img/news_2_content_2.jpg' %}" alt="" />
+        <img src="{% static 'img/news_2_content_1.jpg' %}" alt="" />
+      </div>
+      <section class="time container">
+        <p>26.12.2023</p>
+      </section>
+    </div>
+  </section>
+{% endblock %}
+{% block scripts %}
+  <script src=""></script>
+{% endblock %}

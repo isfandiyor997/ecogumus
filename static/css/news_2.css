@@ -1,0 +1,135 @@
+/*=========================  header   ================================================*/
+.header {
+  position: relative;
+  /* !!! Изменено: вместо фиксированной высоты */
+  min-height: 380px; 
+  background-image: 
+    linear-gradient(to bottom, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.8)),
+    url("../img/header_bg_2.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden; /* Скрываем выходящее содержимое, если что-то выйдет за границы */
+}
+
+.header .header_content {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header .header_content .header_main {
+  background: linear-gradient(90deg, #f8f39e 0%, #f5f571 30%, #ffffff 100%);
+  padding: 50px 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header .header_content .header_main .header_title {
+  text-transform: uppercase;
+  color: #000;
+  font-size: 36px;
+  font-family: "Montserrat-Bold", sans-serif;
+}
+
+/*=========================  news_content   ================================================*/
+.news_content {
+  margin-top: 30px;
+  box-shadow: 2px 5px 9px 0px rgba(0, 0, 0, 0.301);
+  border-radius: 10px;
+}
+
+.news_content .video_wrap {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.news_content .video_wrap .video {
+  /* !!! Изменено: оставляем 20% только для крупных экранов.
+     При узком экране будет переопределяться в медиазапросах */
+  width: 20%;
+}
+
+/* !!! Изменено: "резиновое" видео */
+.news_content .video_wrap .video video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.news_content .video_wrap .news_text {
+  font-size: 16px;
+  /* !!! Изменено: уменьшили отступ */
+  margin-top: 20px; 
+  width: 60%;
+  line-height: 1.5;
+}
+
+.news_content .images {
+  display: flex;
+  width: 100%;
+  justify-content: left;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+/* !!! Изменено: адаптивная ширина изображений */
+.news_content .images img {
+  width: 100%;
+  max-width: 400px; 
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.time {
+  display: flex;
+  justify-content: end;
+}
+
+/*=========================  adaptive   ================================================*/
+@media screen and (max-width: 768px) {
+  .header .header_content .header_main {
+    padding: 30px 10px;
+  }
+  .header .header_content .header_main .header_title {
+    font-size: 24px;
+  }
+
+  .news_content .video_wrap {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  /* !!! Изменено: .video и video занимают всю ширину */
+  .news_content .video_wrap .video {
+    width: 100%;
+    margin-bottom: 20px; /* чтобы отделить видео от текста */
+  }
+  .news_content .video_wrap .video video {
+    width: 100%;
+    height: auto; /* вместо жёсткого 400px */
+  }
+
+  .news_content .video_wrap .news_text {
+    font-size: 16px;
+    width: 100%;
+    line-height: 1.5;
+    margin-top: 0; /* убираем большой отступ, если нужно */
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header .header_content .header_main .header_title {
+    font-size: 16px;
+  }
+}

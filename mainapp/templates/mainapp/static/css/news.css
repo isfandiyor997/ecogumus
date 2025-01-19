@@ -1,0 +1,223 @@
+/*=========================  header   ================================================*/
+.header {
+  position: relative;
+  /* Лучше не использовать фиксированную height, а min-height. 
+     Но если по дизайну вам нужна высота, можно оставить. */
+  min-height: 380px; /* ИЗМЕНЕНО: было height: 380px; */
+  background-image: 
+    linear-gradient(to bottom, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.8)),
+    url("../img/header_bg_2.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.header .header_content {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header .header_content .header_main {
+  background: linear-gradient(90deg, #f8f39e 0%, #f5f571 30%, #ffffff 100%);
+  padding: 60px 20px;
+  border-radius: 15px;
+  /* ИЗМЕНЕНО: вместо фиксированной width: 500px */
+  max-width: 500px;
+  width: 100%;
+  margin: 20 auto; /* чтобы центрировать если нужно */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header .header_content .header_main .header_title {
+  text-transform: uppercase;
+  color: #000;
+  font-size: 30px;
+  font-family: "Montserrat-Bold", sans-serif;
+}
+
+/*=========================  news_cards   ================================================*/
+.news_cards .news_card {
+  padding: 25px;
+  box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.301);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  /* ИЗМЕНЕНО: ширину задаём через flex-контейнер + max-width 
+     в медиазапросах, если нужно */
+  max-width: 1000px; /* например, ограничиваем общую ширину карточки */
+  width: 100%;
+  margin: 30px auto; /* чтобы центрировать, если нужно */
+}
+
+/* Блок с картинкой: */
+.news_cards .news_card .img {
+  /* ИЗМЕНЕНО: вместо width: 500px используем flex: 0 0 500px (или max-width) */
+  flex: 0 0 500px;
+  max-width: 100%; /* не даём вылезать */
+}
+.news_cards .news_card .img img {
+  /* очень важно для адаптации картинок */
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Блок с контентом (текст, кнопка) */
+.news_cards .news_card .card_main {
+  /* ИЗМЕНЕНО: вместо width: calc(...) */
+  flex: 1; /* занимает всё остальное пространство */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.news_cards .news_card .card_main .card_title {
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 25px;
+}
+
+.news_cards .news_card .card_main .btn_more {
+  text-align: center;
+  display: inline-block;
+  width: 180px;
+  height: 40px;
+  background: linear-gradient(90deg, #f8f39e 0%, #f5f571 30%, #ffffff 100%);
+  border-radius: 10px;
+  line-height: 40px;
+  font-size: 14px;
+  font-family: "Montserrat-Bold", sans-serif;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+.news_cards .news_card .card_main .btn_more:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/*=========================  adaptive   ================================================*/
+@media screen and (max-width: 1024px) {
+  .news_cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .news_cards .news_card {
+    /* ИЗМЕНЕНО: вместо width: 500px */
+    max-width: 500px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .news_cards .news_card .img {
+    flex: 0 0 auto; /* убираем жесткое 500px */
+    width: 100%;    /* на планшетах и ниже картинка на всю ширину карточки */
+    max-width: 100%;
+  }
+  .news_cards .news_card .card_main {
+    width: 100%; /* растягивается под картинку */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header .header_content .header_main {
+    padding: 30px 10px;
+    width: 95%; /* ок, можно оставить */
+  }
+  .header .header_content .header_main .header_title {
+    font-size: 36px; /* проверьте, не великовато ли */
+  }
+  .news_cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .news_cards .news_card {
+    /* ИЗМЕНЕНО: вместо width: 400px */
+    max-width: 400px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .news_cards .news_card .img {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 auto; /* убираем фиксированный размер */
+  }
+  .news_cards .news_card .card_main {
+    width: 100%;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header .header_content .header_main {
+    width: 100%;
+  }
+  .header .header_content .header_main .header_title {
+    font-size: 24px;
+  }
+  .news_cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .news_cards .title {
+    font-size: 24px;
+  }
+  .news_cards .news_card {
+    /* ИЗМЕНЕНО: вместо width: 300px */
+    max-width: 300px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .news_cards .news_card .img {
+    width: 100%;
+    max-width: 100%;
+  }
+  .news_cards .news_card .card_main {
+    width: 100%;
+    gap: 30px;
+  }
+  .news_cards .news_card .card_main .card_title {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .news_cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .news_cards .title {
+    font-size: 24px;
+  }
+  .news_cards .news_card {
+    /* ИЗМЕНЕНО: вместо width: 250px */
+    max-width: 250px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .news_cards .news_card .img {
+    width: 100%;
+    max-width: 100%;
+  }
+  .news_cards .news_card .card_main {
+    width: 100%;
+    gap: 30px;
+  }
+  .news_cards .news_card .card_main .card_title {
+    font-size: 18px;
+  }
+}
+/*# sourceMappingURL=news.css.map */

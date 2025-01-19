@@ -2,16 +2,17 @@
 {% load static %}
 
 {% block links %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 <link rel="stylesheet" href="{% static 'css/about_company.css' %}">
 {% endblock links %}
 {% block title %} {{title}} {% endblock title %}
 {% block header_content %}
 
-<div class="title">
-    Biz O'zbekistonda yetakchi organomineral o'g'it ishlab chiqaruvchilarmiz
-</div>
-<div class="logo">
-    <img src="{% static 'img/logo.png' %}" alt="logo">
+<div class="header_main">
+    <h1 class="header_title">
+        МBiz O'zbekistonda yetakchi organomineral o'g'it ishlab chiqaruvchilarmiz
+</h2>
 </div>
 {% endblock header_content %}
 {% block content %}
@@ -21,7 +22,7 @@
         <div class="title"><div class="wrap">TASHKILOT HAQIDA</div></div>
   
         <span class="about_company_subtitle">
-            "Ecogumus" rasmiy ravishda 1997 yilda tashkil etilgan, ammo uning rivojlanishi uchun 
+                "Ekogumus" rasmiy ravishda 1997 yilda tashkil etilgan, ammo uning rivojlanishi uchun 
                 birinchi qadamlar 1988 yilda otamiz, kompaniya asoschisi 
                 Xaytboy Solijonov tomonidan qilingan. Biz otamizning ishini 
                 kengaytirish va rivojlantirishda davom etamiz. O'ttiz yildan ortiq vaqt ichida
@@ -51,13 +52,12 @@
             <p>
                 Yildan yilga "Ekogumus" o'zining tadqiqot va ishlab chiqarish imkoniyatlarini kengaytirdi. Vaqt o'tishi bilan ularning o'g'itlari butun dunyo bo'ylab fermerlar va qishloq xo'jaligi tomonidan katta talabga ega bo'ldi. Kompaniya o'z mahsulotlarini turli tuproq va iqlim sharoitlariga moslashtirish uchun agronomlar bilan faol hamkorlik qildi.
             </p>
-        </div>
-        <div class="history_colum">
+        
             <p>
                 "Ekogumus" kompaniyasining o'sishda davom etdi va u nafaqat organomineral o'g'itlarning yetakchi ishlab chiqaruvchisi, balki qishloq xo'jaligi tadqiqotlari sohasida ham yetakchi bo'ldi. Kompaniya yangi texnologiyalarni ishlab chiqishga sarmoya kiritdi, bu ularga yanada samarali va ekologik toza mahsulotlarni yaratishga imkon berdi.
             </p>
             <p>
-                Vaqt o'tishi bilan" Ekogumus " qishloq xo'jaligida innovatsiyalar va sifat ramzi sifatida mashhur bo'ldi. U qishloq barqarorligida faol ishtirok etib, hosildorlikni oshirish va mahalliy fermerlar hayotini yaxshilash uchun bilim va resurslarni taqdim etdi.
+                Vaqt o'tishi bilan "Ekogumus" qishloq xo'jaligida innovatsiyalar va sifat ramzi sifatida mashhur bo'ldi. U qishloq barqarorligida faol ishtirok etib, hosildorlikni oshirish va mahalliy fermerlar hayotini yaxshilash uchun bilim va resurslarni taqdim etdi.
             </p>
             <p>
                 Bugungi kunda, tashkil etilganidan o'ttiz yildan ko'proq vaqt o'tgach, "Ekogumus" o'z mijozlarini qishloq xo'jaligining o'sishi va jamiyat farovonligiga hissa qo'shadigan innovatsion mahsulotlar va echimlar bilan xursand qilishni davom ettirmoqda. Uning sa'y-harakatlari va qishloq xo'jaligiga sodiqligi jahon qishloq xo'jaligining oziq-ovqat xavfsizligi va farovonligini ta'minlashga haqiqiy hissa bo'ldi.
@@ -65,7 +65,77 @@
         </div>
     </div> 
 </section>
+<section class="certificates container">
+    <div class="composition">
+        <div class="composition_title">Muvofiqlik va sifat sertifikatlari</div>
+        </div>
+    <div class="certificates_slider">
+        <div id="animated-thumbnails-gallery" class="certificates_slider_wrap">
+            <a href="{% static 'img/certificate_1.png' %}" class="page">
+                <img src="{% static 'img/certificate_1.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_8.png' %}" class="page">
+                <img src="{% static 'img/certificate_8.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_12.png' %}" class="page">
+                <img src="{% static 'img/certificate_12.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_9.png' %}" class="page">
+                <img src="{% static 'img/certificate_9.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_10.png' %}" class="page">
+                <img src="{% static 'img/certificate_10.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_2.png' %}" class="page">
+                <img src="{% static 'img/certificate_2.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_3.png' %}" class="page">
+                <img src="{% static 'img/certificate_3.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_13.png' %}" class="page">
+                <img src="{% static 'img/certificate_13.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_14.png' %}" class="page">
+                <img src="{% static 'img/certificate_14.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_4.png' %}" class="page">
+                <img src="{% static 'img/certificate_4.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_5.png' %}" class="page">
+                <img src="{% static 'img/certificate_5.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_6.png' %}" class="page">
+                <img src="{% static 'img/certificate_6.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_7.png' %}" class="page">
+                <img src="{% static 'img/certificate_7.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_11.png' %}" class="page">
+                <img src="{% static 'img/certificate_11.png' %}" alt="certificate">
+            </a>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+<section id="feedback" style="margin-top: 50px; padding: 20px;">
+    <h2>Fikr-mulohaza</h2>
+    <form action="/submit_feedback/" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+        {% csrf_token %}
+      <label for="name">Ism:</label>
+      <input type="text" id="name" name="name" placeholder="Ismingizni kiriting" required style="padding: 10px; width: 100%;">
+  
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Elektron pochtangizni kiriting" required style="padding: 10px; width: 100%;">
+  
+      <label for="comment">Sharh:</label>
+      <textarea id="comment" name="comment" placeholder="Fikringizni kiriting" rows="5" required style="padding: 10px; width: 100%;"></textarea>
+  
+      <button type="submit" style="padding: 10px 20px; color: black; border: none; cursor: pointer;">Yuborish</button>
+    </form>
+  </section>
 {% endblock content %}
 {% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="{% static 'js/about_company.js'%}"></script>
 {% endblock scripts %}

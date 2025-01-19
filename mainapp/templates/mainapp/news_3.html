@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block links %}
+  <link rel="stylesheet" href="{% static 'css/news_3.css' %}" />
+{% endblock %}
+{% block title %}
+  {{ title }}
+{% endblock %}
+{% block header_content %}
+  <div class="header_main">
+    <h1 class="header_title">
+      Узбекистанские производители нацелены на экспорт свыше $100 млн</h1>
+  </div>
+{% endblock %}
+{% block content %}
+  <section class="news_content container">
+      <div class="news_text">
+        <p> Министерством инвестиций, промышленности и торговли Республики Узбекистан совместно с международной компанией-оператором IMGR реализуется программа экспортного акселератора узбекистанских производителей.
+        </p>
+          <p> На первом этапе было собрано более 500 заявок, из которых отобраны 100 участников - компаний-производителей из различных отраслей, намеренных выйти на зарубежные рынки. </p>
+        
+            <p> Участники программы экспортного акселератора нацелились на экспорт в более $100 млн в 2025 году.
+            </p>
+            </div>
+    </div>
+    <div class="news_content">
+      <div class="images">
+        <img src="{% static 'img/news_3_1.jpg' %}" alt="" />
+        <img src="{% static 'img/news_3_2.jpg' %}" alt="" />
+        <img src="{% static 'img/news_3_3.jpg' %}" alt="" />
+      </div>
+    </div>
+    <section class="time container">
+      <p>03.12.2023</p>
+    </section>
+  </section>
+{% endblock %}
+{% block scripts %}
+  <script src=""></script>
+{% endblock %}

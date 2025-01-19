@@ -2,16 +2,17 @@
 {% load static %}
 
 {% block links %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 <link rel="stylesheet" href="{% static 'css/about_company.css' %}">
 {% endblock links %}
 {% block title %} {{title}} {% endblock title %}
 {% block header_content %}
 
-<div class="title">
-    Мы являемся ведущими производителями органоминеральных удобрений в Узбекистане
-</div>
-<div class="logo">
-    <img src="{% static 'img/logo.png' %}" alt="logo">
+<div class="header_main">
+    <h1 class="header_title">
+        Мы занимаем лидирующие позиции в области производства органоминеральных удобрений в Узбекистане.
+</h2>
 </div>
 {% endblock header_content %}
 {% block content %}
@@ -32,8 +33,6 @@
         <div class="history_colum">
             <p>
                 Компания стала называться "Ekogumus" и начала свой путь с небольшого участка земли для разведения Калифорнийских червей и получения высококачественного удобрения - Биогумус. Впоследствии для анализа в начале начали пользоваться лабораторией Ферганского Государственного Университета.
-            </p>
-            <p>
                 Несмотря на ограниченные ресурсы, команда ученых работала с неисчерпаемым энтузиазмом и решимостью. Первые годы были непростыми, но благодаря научному таланту и трудолюбию, целеустремленности они смогли разработать уникальный тип органоминерального удобрения.
             </p>
             <p>
@@ -44,12 +43,11 @@
                 агрономами, чтобы адаптировать свои продукты под различные 
                 почвы и климатические условия.
             </p>
-        </div>
-        <div class="history_colum">
+        
             <p>
                 Успех компании "Ekogumus" продолжал расти, и она стала не 
                 только ведущим производителем органоминеральных удобрений, но и 
-                лидерам в области исследований сельского хозяйства. Компания 
+                лидером в области исследований сельского хозяйства. Компания 
                 инвестировала в разработку новых технологий, что позволило 
                 им создавать еще более эффективные и экологически чистые продукты.
             </p>
@@ -71,7 +69,77 @@
         </div>
     </div> 
 </section>
+<section class="certificates container">
+    <div class="composition">
+        <div class="composition_title">Сертификаты соответсвия и качества</div>
+        </div>
+    <div class="certificates_slider">
+        <div id="animated-thumbnails-gallery" class="certificates_slider_wrap">
+            <a href="{% static 'img/certificate_1.png' %}" class="page">
+                <img src="{% static 'img/certificate_1.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_8.png' %}" class="page">
+                <img src="{% static 'img/certificate_8.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_12.png' %}" class="page">
+                <img src="{% static 'img/certificate_12.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_9.png' %}" class="page">
+                <img src="{% static 'img/certificate_9.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_10.png' %}" class="page">
+                <img src="{% static 'img/certificate_10.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_2.png' %}" class="page">
+                <img src="{% static 'img/certificate_2.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_3.png' %}" class="page">
+                <img src="{% static 'img/certificate_3.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_13.png' %}" class="page">
+                <img src="{% static 'img/certificate_13.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_14.png' %}" class="page">
+                <img src="{% static 'img/certificate_14.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_4.png' %}" class="page">
+                <img src="{% static 'img/certificate_4.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_5.png' %}" class="page">
+                <img src="{% static 'img/certificate_5.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_6.png' %}" class="page">
+                <img src="{% static 'img/certificate_6.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_7.png' %}" class="page">
+                <img src="{% static 'img/certificate_7.png' %}" alt="certificate">
+            </a>
+            <a href="{% static 'img/certificate_11.png' %}" class="page">
+                <img src="{% static 'img/certificate_11.png' %}" alt="certificate">
+            </a>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+<section id="feedback" style="margin-top: 50px; padding: 20px;">
+    <h2>Обратная связь</h2>
+    <form action="/submit_feedback/" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+        {% csrf_token %}
+      <label for="name">Имя:</label>
+      <input type="text" id="name" name="name" placeholder="Введите ваше имя" required style="padding: 10px; width: 100%;">
+  
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Введите ваш email" required style="padding: 10px; width: 100%;">
+  
+      <label for="comment">Комментарий:</label>
+      <textarea id="comment" name="comment" placeholder="Введите ваш комментарий" rows="5" required style="padding: 10px; width: 100%;"></textarea>
+  
+      <button type="submit" style="padding: 10px 20px; color: black; border: none; cursor: pointer;">Отправить</button>
+    </form>
+  </section>
 {% endblock content %}
 {% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="{% static 'js/about_company.js'%}"></script>
 {% endblock scripts %}

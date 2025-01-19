@@ -3,50 +3,61 @@
 
 {% block links %}
 <link rel="stylesheet" href="{% static 'css/product.css' %}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css">
 {% endblock links %}
 {% block title %} {{title}} {% endblock title %}
 {% block header_content %}
 <div class="header_main">
-    <h1 class="header_title">What is biohumus and what is its composition?</h1>
+    <h1 class="header_title">What is vermicompost and what is its composition?</h1>
 </div>
 {% endblock header_content %}
 {% block content %}
 <section class="product_description container">
     <p class="description">
-        Vermicompost is a product of processing organic masses by California red earthworms. It is a loose, finely granulated mass with granule sizes of 1-3 mm, possibly up to 5mm. Concentrated fertilizer contains in a balanced combination a whole complex of nutrients - micro and macroelements, mineral fertilizers, amino acids, humic acid, humates and fulvates of sodium and potassium, natural phytohormones, spores useful for plants of soil microorganisms, gibberellins in an easily digestible form. <br> <strong>Благодаря интенсивной ферментации усиливается:</strong> 
-    </p>
+        <strong>Vermicompost</strong> is a product of processing organic matter by California Reds  
+        earthworms. It is a loose, finely granular mass.
+        with granule sizes 1-3 mm, possibly up to 5mm.  Concentrated fertilizer  
+        It contains, in a balanced combination, a whole range of nutrients 
+        substances - micro and macronutrients, mineral fertilizers, amino acids,
+        humic acid, humates and fulvates of sodium and potassium, natural phytohormones,
+        spores useful for plants of soil microorganisms, gibberellins in 
+        an easily digestible form. </p> 
+        
+        <div class="composition">
+            <div class="composition_title">Due to intensive fermentation, it is enhanced:
+            </div>
     <div class="result">
         <ol>
             <li>Plant growth and development.</li>
-            <li>Increases germination and seed germination energy. </li>
-            <li>Stimulates root formation in plants.</li>
-            <li>Increases the immunity of plants.</li>
-            <li>Increases fertility, looseness of the soil.</li>
-            <li>Keeps moisture in the soil for a long time.</li>
+            <li>Increases the germination and germination energy of seeds. </li>
+            <li>It stimulates root formation in plants.</li>
+            <li>Enhances plant immunity.</li>
+            <li>Increases the fertility and looseness of the soil.</li>
+            <li>It keeps moisture in the soil for a long time.</li>
             <li>Reduces the content of nitrites in agricultural products.</li>
-            <li>Prevents the entry of heavy metals and radionuclides into the plant.</li>
+            <li>It prevents the entry of heavy metals and radionuclides into the plant.</li>
             <li>Increases the content of sugars, proteins and vitamins in fruits and vegetables.</li>
             <li>Eliminates chlorosis, stimulates flowering and fruiting. </li>
-            <li>Gives an effect to the rapid ripening of fruits for 7-10 days.</li>
-            <li>Stress is relieved, especially when planting plants, seeds.</li>
-            <li>The products grown on vermicompost practically increase the duration of storage.</li>
-            <li>Vermicompost is 10 times higher than manure in terms of nutrient content.
-                Vermicompost is 10 times more effective than manure. And fresh manure
-                it is a focus of fungal and viral diseases of plants.
-                The vermicompost completely lacks viable weed seeds,
-                has antiseptic properties, destroying viral and fungal
-                diseases of plants.
-            </li>
+            <li>It has the effect of rapid fruit ripening for 7-10 days.</li>
+            <li>Stress is relieved, especially when planting plants and seeds.</li>
+            <li>Products grown on vermicompost practically increase the shelf life.</li>
+            <li>Vermicompost is 10 times higher than manure in terms of nutrient content. 
+                Vermicompost is more effective than manure by 10 times or more. And fresh manure 
+                It is a source of fungal and viral diseases of plants. 
+                Vermicompost completely lacks viable weed seeds,
+                has antiseptic properties, destroying viral and fungal 
+                plant diseases.</li>
         </ol>
     </div>
     <div class="composition">
         <div class="composition_title">
-            Chemical composition of Vermicompost
+            The chemical composition of Vermicompost:
         </div>
         <table>
             <tr class="row">
-                <th class="name" >Appearance</th>
-                <th class="value">Homogeneous crumbly mass from dark brown to black. The presence of inclusions of CRE and their cocoons is allowed.</th>
+                <th class="name" >External appearance</th>
+                <th class="value">Homogeneous crumbly mass from dark brown to black in color. Inclusions of CDCs and their cocoons are allowed.</th>
             </tr> 
             <tr class="row">
                 <th class="name" >Mass fraction of organic substances, %, not less</th>
@@ -69,7 +80,7 @@
                 <th class="value">28-45%</th>
             </tr>
             <tr class="row">
-                <th class="name">pH of 1% suspension </th>
+                <th class="name">pH of 1% suspension</th>
                 <th class="value">6.8-7.2%</th>
             </tr>
             <tr class="row">
@@ -106,11 +117,11 @@
             </tr>
             <tr class="row">
                 <th class="name" >Manganese</th>
-                <th class="value">60-80 мг/кг</th>
+                <th class="value">60-80 mg/k</th>
             </tr>
             <tr class="row">
                 <th class="name" >Mass fraction of heavy metals, mg/kg</th>
-                <th class="value">below the MPC for soils</th>
+                <th class="value">below the maximum permissible concentration for soils</th>
             </tr>
             <tr class="row">
                 <th class="name" >Pathogenic microflora</th>
@@ -126,14 +137,44 @@
         <div class="buyers_title">
             Main buyers
         </div>
-        <p>The main buyers of vermicompost are: dehkan, farmers, greenhouses and flower farms, state organizations that have landscaping areas and subsidiary farms, as well as private individuals who have garden and country plots. We are looking for partners from abroad with the subsequent sale of our products to other countries.<br>
-            In the modern world, the population attaches great priority to the use of environmentally friendly vegetables, fruits and other products grown on the basis of organic mineral fertilizer biohumus.
+        <p>The main buyers of vermicompost are: Dehkan, farmers, 
+            greenhouses and flower farms, government organizations, 
+            which have landscaping areas and subsidiary farms,
+            as well as private individuals who have garden and country plots. 
+            We are looking for partners from abroad with the subsequent sale of our products.
+             to other countries.<br>
+             In the modern world, the population attaches great priority to 
+             consumption of organic vegetables, fruits and other products,
+             grown on the basis of organic mineral fertilizer biohumus.  
            </p>
+    </div>
+</section>
+<section class="bags container">
+    <div class="composition">
+        <div class="composition_title">Product: Ecogomus</div>
+        <p class="description">
+            Ecogomus is an organic fertilizer that is sold in bags of the following weights: 2 kg, 7 kg, 10 kg and 20 kg. </p> 
+        </div>
+    <div class="bags_slider">
+        <div id="animated-thumbnails-gallery" class="bags_slider_wrap">
+            <a href="{% static 'img/bags.jpg' %}" class="page">
+                <img src="{% static 'img/bags.jpg' %}" alt="bags">
+            </a>
+            <a href="{% static 'img/bags_7.jpg' %}" class="page">
+                <img src="{% static 'img/bags_7.jpg' %}" alt="bags">
+            </a>
+            <a href="{% static 'img/bags_20.jpg' %}" class="page">
+                <img src="{% static 'img/bags_20.jpg' %}" alt="bags">
+            </a>
+            <a href="{% static 'img/bags_10.jpg' %}" class="page">
+                <img src="{% static 'img/bags_10.jpg' %}" alt="bags">
+            </a>
+        </div>
     </div>
 </section>
 <section class="production_demonstration container">
     <div class="title">
-        Video demonstration of production
+        Video production demonstration
     </div>
     <div class="video_gallery">
         <div class="video"><iframe class="hor_vid" width="956" height="500" src="https://www.youtube.com/embed/AE9L71IuN7A" title="&quot;Экогумус&quot; МЧЖамиятимиз. Узб.Респ-да ягона экспортга махсулот чикариш учун керакли хужжатларга эга" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
@@ -144,7 +185,7 @@
     </div>
     <div class="go_to_youtube container">
         <div class="text">
-            In order to get acquainted with the world of our production process in more detail, we invite you to go on a virtual journey to our official YouTube channel.
+            In order to learn more about the world of our production process, we invite you to take a virtual trip to our official YouTube channel.
         </div>
         <div class="wrap">
             <div class="images">
@@ -168,5 +209,7 @@
 
 {% endblock content %}
 {% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
 <script src="{% static 'js/product.js'%}"></script>
 {% endblock scripts %}

@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/news.css' %}">
+{% endblock links %}
+{% block title %} {{title}} {% endblock title %}
+{% block header_content %}
+<div class="header_main">
+    <h1 class="header_title">Yangiliklar</h1>
+</div>
+{% endblock header_content %}
+{% block content %}
+<section class="news_cards container">
+    <div class="news_card">
+        <div class="img">
+            <img src="{% static 'img/news_content_5.jpg' %}" alt="">
+        </div>
+        <div class="card_main">
+            <div class="card_title">
+                O'zbekiston ishlab chiqaruvchilari 100 million dollardan ortiq eksport qilishni maqsad qilgan: tezlashtirish dasturi boshlandi
+            </div>
+            <a href="{% url 'mainapp:news_3_page' lang=language %}" class="btn_more">
+                Batafsil
+            </a>
+        </div>
+    </div>
+    <div class="news_card">
+        <div class="img">
+            <img src="{% static 'img/news_card_img_2.jpg' %}" alt="">
+        </div>
+        <div class="card_main">
+            <div class="card_title">
+                “EKOGUMUS” VA “MAS XOLDING KOMPANIYASI” SAVDO-IQTISODIY ALOQALARNI RIVOJLANTIRISH BO'YICHA MEMORANdum IMZO'LDI
+            </div>
+            <a href="{% url 'mainapp:news_2_page' lang=language %}" class="btn_more">
+                Batafsil
+            </a>
+        </div>
+    </div>
+    <div class="news_card">
+        <div class="img">
+            <img src="{% static 'img/news_card_img_1.jpg' %}" alt="">
+        </div>
+        <div class="card_main">
+            <div class="card_title">
+                “O‘zkimoimpeks” kompaniyasi “BIOHUMUS” mahsulotini eksportga taklif qilmoqda
+            </div>
+            <p class="card_text">
+                "BIOHUMUS" - bu organo-mineral o'g'it. Tarkibida turli miqdorda ozuqa moddalari mavjud: gumus, gumatlar, aminokislotalar, gormonlar, azot, fosfor, kaliy va xelatli to'plam...
+            </p>
+            <a href="https://uzkimyoimpeks.uz/ru/news/uzkimyoimpeks-company-offers-biohumus-product-for-export" class="btn_more">Batafsil</a>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}
+{% block scripts %}
+<script src="{% static 'js/news.js'%}"></script>
+{% endblock scripts %}

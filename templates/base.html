@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang={{ language }}>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -75,6 +75,22 @@
                                     Mahsulot
                                     {% endif %}
                                 </a>
+                            </li>
+                            <li class="menu_list-item">
+                                <a href="{% url 'mainapp:news_page' lang=language%}" class="menu_list-link">
+                                    {% if language == None  %}
+                                    Новости
+                                    {% endif %}
+                                    {% if language == 'en'  %}
+                                    News
+                                    {% endif %}
+                                    {% if language == 'ru'  %}
+                                    Новости
+                                    {% endif %}
+                                    {% if language == 'uz'  %}
+                                    Yangiliklar
+                                    {% endif %}
+                                    </a>
                             </li>
                             <li class="menu_list-item">
                                 <a href="{% url 'mainapp:cooperation_page' lang=language %}" class="menu_list-link">
@@ -181,10 +197,9 @@
                             {% endif %}
                         </div>
                         <ul>
-                            <li><a href="tel:+998936418545">+99893 641 85-45</a></li>
-                            <li><a href="tel:+998906344575">+99890 634 45-75</a></li>
-                            <li><a href="tel:+998934802151">+99893 800 45-75</a></li>
-                            <li><a href="tel:+998732446240">+99873 244 62-40</a></li>
+                            <li><a href="tel:+998936418545">+99893 (641) 85-45</a></li>
+                            <li><a href="tel:+998906344575">+99890 (634) 45-75</a></li>
+                            <li><a href="tel:+998934802151">+99893 (800) 45-75</a></li>
                         </ul>
                     </div>
                     <div class="email contact">
@@ -192,19 +207,20 @@
                             Email:
                         </div>
                         <ul>
-                            <li><a href="mailto:Bashfergana@mail.ru">Bashfergana@mail.ru</a></li>
+                            <li><a href="mailto:bashfergana@mail.ru">bashfergana@mail.ru</a></li>
+                            <li><a href="mailto:solijonov250675@gmail.com">solijonov250675@gmail.com</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="schedule">
                     {% if language == None  %}
-                    <span><strong>График работы: </strong>Пн-Суб 9:00-18:00</span>
+                    <span><strong>График работы: </strong>Пн-Сб 9:00-18:00</span>
                     {% endif %}
                     {% if language == 'en'  %}
                     <span><strong>Opening hours: </strong>Mon.-Sat. 9:00-18:00</span>
                     {% endif %}
                     {% if language == 'ru'  %}
-                    <span><strong>График работы: </strong>Пн-Суб 9:00-18:00</span>
+                    <span><strong>График работы: </strong>Пн-Сб 9:00-18:00</span>
                     {% endif %}
                     {% if language == 'uz'  %}
                     <span><strong>Ishlash jadvali: </strong>Du-Shan 9:00-18:00</span>
@@ -232,16 +248,16 @@
         </div>
         <div class="footer_bottom">
             {% if language == None  %}
-            Все права защищены © ООО «Ekogumus», УЗБЕКИСТАН 2023
+            Все права защищены © ООО «Ekogumus», УЗБЕКИСТАН 2024
             {% endif %}
             {% if language == 'en'  %}
-            Copyright © «Ekogumus» LLC, UZBEKISTAN 2023
+            Copyright © «Eсogumus» LLC, UZBEKISTAN 2024
             {% endif %}
             {% if language == 'ru'  %}
-            Все права защищены © ООО «Ekogumus», УЗБЕКИСТАН 2023
+            Все права защищены © ООО «Ekogumus», УЗБЕКИСТАН 2024
             {% endif %}
             {% if language == 'uz'  %}
-            Barcha huquqlar himoyalangan © "Ekogumus" MCHJ, O'zbekiston 2023
+            Barcha huquqlar himoyalangan © "Ekogumus" MCHJ, O'zbekiston 2024
             {% endif %}
         </div>
         </div>

@@ -1,0 +1,221 @@
+/*=========================  header   ================================================*/
+.header {
+    background-image: url("../img/header_bg_2.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    .header_content {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .header_main {
+            background: linear-gradient(
+                90deg,
+                rgba(255, 255, 0, 1) 0%,
+                rgba(255, 255, 107, 1) 30%,
+                rgba(255, 255, 255, 1) 100%
+            );
+            padding: 50px 20px;
+            border-radius: 10px;
+            width: 600px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .header_title {
+                text-transform: uppercase;
+                color: #000;
+                font-size: 48px;
+                font-family: "Montserrat-Bold", sans-serif;
+            }
+        }
+    }
+}
+
+/*=========================  product_description   ================================================*/
+.product_description {
+    line-height: 1.5;
+    padding-top: 20px;
+    padding-bottom: 80px;
+    .description {
+    }
+    .result {
+        padding-left: 26.55px;
+        ol {
+            color: #ff0000;
+            font-family: "Montserrat-Bold", sans-serif;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            li {
+            }
+        }
+    }
+    .composition {
+        .composition_title {
+            margin: 20px 0;
+            font-size: 36px;
+        }
+        table {
+            border-collapse: collapse;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            tr {
+                border: #000 solid 1px;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+                .name {
+                    text-align-last: center;
+                    width: 70%;
+                }
+                .value {
+                    border-left: #000 solid 1px;
+                    width: 30%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .buyers {
+        .buyers_title {
+            margin: 20px 0;
+            font-size: 36px;
+        }
+    }
+}
+
+/*=========================  production_demonstration   ================================================*/
+.production_demonstration {
+    .title {
+        font-size: 36px;
+        text-align: center;
+        font-family: "Montserrat-Medium", sans-serif;
+        margin-bottom: 80px;
+    }
+    .video_gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        .video {
+            display: inline-block;
+        }
+        .wrap {
+            gap: 10px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .go_to_youtube {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        max-width: 800px;
+        padding: 10px;
+        box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.301);
+        .text {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .wrap {
+            margin: 30px 0;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            .images {
+                display: flex;
+                
+                .image {
+                    img {
+                        width: 100px;
+                    }
+                }
+                .arrow {
+                    transform: rotate(90deg);
+                }
+            }
+            .btn_go_to_youtube {
+                margin-top: 30px;
+                text-align: center;
+                display: inline-block;
+                width: 180px;
+                height: 40px;
+                background: linear-gradient(-90deg, yellow 0%, #ffff6b 30%, white 100%);
+                border-radius: 10px;
+                line-height: 40px;
+                font-size: 14px;
+                font-family: "Montserrat-Bold", sans-serif;
+            }
+        }
+    }
+}
+
+/*=========================  adaptive   ================================================*/
+@media screen and (min-width: 1921px) {
+}
+@media screen and (max-width: 1920px) {
+}
+@media screen and (max-width: 1600px) {
+}
+@media screen and (max-width: 1280px) {
+}
+@media screen and (max-width: 1024px) {
+}
+@media screen and (max-width: 768px) {
+    .header {
+        .header_content {
+            .header_main {
+                padding: 30px 10px;
+                width: 95%;
+                .header_title {
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 425px) {
+    .header {
+        .header_content {
+            .header_main {
+                width: 100%;
+                .header_title {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    .product_description {
+        .composition {
+            table {
+                tr {
+                    .name {
+                    }
+                    .value {
+                        width: 45%;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 320px) {
+    .product_description {
+        .composition {
+            table {
+                tr {
+                    .name {
+                    }
+                    .value {
+                        width: 55%;
+                    }
+                }
+            }
+        }
+    }
+}

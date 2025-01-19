@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block links %}
+  <link rel="stylesheet" href="{% static 'css/news_3.css' %}" />
+{% endblock %}
+{% block title %}
+  {{ title }}
+{% endblock %}
+{% block header_content %}
+  <div class="header_main">
+    <h1 class="header_title">
+      O'zbekiston ishlab chiqaruvchilari 100 million dollardan ortiq eksport qilishni maqsad qilgan</h1>
+  </div>
+{% endblock %}
+{% block content %}
+  <section class="news_content container">
+      <div class="news_text">
+        <P> O'zbekiston Respublikasi investitsiyalar, sanoat va savdo vazirligi IMGR xalqaro operator kompaniyasi bilan birgalikda O'zbekiston ishlab chiqaruvchilarining eksport akseleratori dasturini amalga oshirmoqda.
+        </p>
+          <p> birinchi bosqichda 500 dan ortiq arizalar to'plandi, ulardan 100 nafar ishtirokchi - turli sohalardagi ishlab chiqaruvchi kompaniyalar chet el bozorlariga chiqish niyatida tanlandi. </p>
+        
+            <p > eksport akseleratori dasturi ishtirokchilari 2025 yilda 100 million dollardan ortiq eksport qilishni maqsad qilgan.
+            </p>
+            </div>
+    </div>
+    <div class="news_content">
+      <div class="images">
+        <img src="{% static 'img/news_3_1.jpg' %}" alt="" />
+        <img src="{% static 'img/news_3_2.jpg' %}" alt="" />
+        <img src="{% static 'img/news_3_3.jpg' %}" alt="" />
+      </div>
+    </div>
+    <section class="time container">
+      <p>03.12.2023</p>
+    </section>
+  </section>
+{% endblock %}
+{% block scripts %}
+  <script src=""></script>
+{% endblock %}

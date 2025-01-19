@@ -3,6 +3,8 @@
 
 {% block links %}
 <link rel="stylesheet" href="{% static 'css/product.css' %}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css">
 {% endblock links %}
 {% block title %} {{title}} {% endblock title %}
 {% block header_content %}
@@ -13,15 +15,18 @@
 {% block content %}
 <section class="product_description container">
     <p class="description">
-        Биогумус- продукт переработки органических масс Калифорнийскими красными  
+        <strong>Биогумус</strong>- продукт переработки органических масс Калифорнийскими красными  
         дождевыми червями. Представляет собой сыпучую, мелкогранулируванную массу
         с размерами гранул 1-3 мм, возможно до 5мм.  Концентрированное удобрение  
         содержит в сбалансированном сочетании целый комплекс питательных 
         веществ - микро и макроэлементы, минеральные удобрения, аминокислоты, 
         гуминовая кислота, гуматы и фульваты натрия и калия, природные фитогормоны, 
         споры, полезные для растений почвенных микроорганизмов, гиббереллины в 
-        легкоусвояемой форме. <br> <strong>Благодаря интенсивной ферментации усиливается:</strong> 
-    </p>
+        легкоусвояемой форме. </p> 
+        
+        <div class="composition">
+            <div class="composition_title">Благодаря интенсивной ферментации усиливается:
+            </div>
     <div class="result">
         <ol>
             <li>Рост и развитие растений.</li>
@@ -47,7 +52,7 @@
     </div>
     <div class="composition">
         <div class="composition_title">
-            Химический состав Биогумуса
+            Химический состав Биогумуса:
         </div>
         <table>
             <tr class="row">
@@ -144,6 +149,29 @@
            </p>
     </div>
 </section>
+<section class="bags container">
+    <div class="composition">
+        <div class="composition_title">Продукт: Экогомус</div>
+        <p class="description">
+            Экогомус — это органическое удобрение, которое продается в мешках следующих весов: 2 кг, 7 кг, 10 кг и 20 кг. </p> 
+        </div>
+    <div class="bags_slider">
+        <div id="animated-thumbnails-gallery" class="bags_slider_wrap">
+            <a href="{% static 'img/bags.jpg' %}" class="page">
+                <img src="{% static 'img/bags.jpg' %}" alt="bags">
+            </a>
+            <a href="{% static 'img/bags_7.jpg' %}" class="page">
+                <img src="{% static 'img/bags_7.jpg' %}" alt="bags">
+            </a>
+            <a href="{% static 'img/bags_20.jpg' %}" class="page">
+                <img src="{% static 'img/bags_20.jpg' %}" alt="bags">
+            </a>
+            <a href="{% static 'img/bags_10.jpg' %}" class="page">
+                <img src="{% static 'img/bags_10.jpg' %}" alt="bags">
+            </a>
+        </div>
+    </div>
+</section>
 <section class="production_demonstration container">
     <div class="title">
         Видео-демонстрация производства
@@ -181,5 +209,7 @@
 
 {% endblock content %}
 {% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
 <script src="{% static 'js/product.js'%}"></script>
 {% endblock scripts %}

@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/news.css' %}">
+{% endblock links %}
+{% block title %} {{title}} {% endblock title %}
+{% block header_content %}
+<div class="header_main">
+    <h1 class="header_title">Новости</h1>
+</div>
+{% endblock header_content %}
+{% block content %}
+<section class="news_cards container">
+    <div class="news_card">
+        <div class="img">
+            <img src="{% static 'img/news_content_5.jpg' %}" alt="">
+        </div>
+        <div class="card_main">
+            <div class="card_title">
+                Узбекистанские производители нацелены на экспорт свыше $100 млн: стартовала программа акселерации
+            </div>
+            <a href="{% url 'mainapp:news_3_page' lang=language %}" class="btn_more">
+                Подробнее
+            </a>
+        </div>
+    </div>
+    <div class="news_card">
+        <div class="img">
+            <img src="{% static 'img/news_card_img_2.jpg' %}" alt="">
+        </div>
+        <div class="card_main">
+            <div class="card_title">
+                "EKOGUMUS" И "MAS HOLDING COMPANY" Подписали меморандум о развитии торгово-экономических отношений
+            </div>
+            <a href="{% url 'mainapp:news_2_page' lang=language %}" class="btn_more">
+                Подробнее
+            </a>
+        </div>
+    </div>
+    <div class="news_card">
+        <div class="img">
+            <img src="{% static 'img/news_card_img_1.jpg' %}" alt="">
+        </div>
+        <div class="card_main">
+            <div class="card_title">
+                Компания «Узкимёимпэкс» предлагает на экспорт продукт “BIOHUMUS”
+            </div>
+            <p class="card_text">
+                “BIOHUMUS” – это органо-минеральное удобрение. Cодержит различное количество питательных веществ: гумус, гуматы, аминокислоты, гармоны, азот, фосфор, калий и хелатированный набор ...
+            </p>
+            <a href="https://uzkimyoimpeks.uz/ru/news/uzkimyoimpeks-company-offers-biohumus-product-for-export" class="btn_more">Подробнее</a>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}
+{% block scripts %}
+<script src="{% static 'js/news.js'%}"></script>
+{% endblock scripts %}
